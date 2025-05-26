@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GastroLab</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <h1>Receitas Deliciosas</h1>
+    <div class="receitas" id="lista-receitas">
+        
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar" id="fechar-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <img id="modal-imagem" src="" alt="">
+            <h3>Ingredientes:</h3>
+            <ul id="modal-ingredientes"></ul>
+            <h3>Modo de Preparo:</h3>
+            <ol id="modal-preparo"></ol>
+        </div>
+    </div>
+
+    <div id="teclado-virtual" class="teclado">
+        <div id="teclas">
+
+            <!-- teclas pelo js -->
+
+        </div>
+        <button onclick="fecharTeclado()">Fechar</button>
+    </div>
+
+    <div class="barra-superior">
+        <input type="text" id="campo-busca" placeholder="Buscar receitas..."
+        onkeyup="filtrarReceitas()">
+        <button id="botao-busca" onclick="filtrarReceitas()">Buscar</button>
+        <button id="abrir-teclado">e</button>
+    </div>
+
+    <script src="index.js"></script>
+
+    </body>
+</html>
