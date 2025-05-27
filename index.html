@@ -1,21 +1,29 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GastroLab</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body>  
+
     <h1>Receitas Deliciosas</h1>
-    <div class="receitas" id="lista-receitas">
-        
-    <div id="modal" class="modal">
+
+    <div class="barra-superior">
+        <input type="text" id="campo-busca" placeholder="Buscar receitas..." onkeyup="filtrarReceitas()" />
+        <button id="botao-busca" onclick="filtrarReceitas()">Buscar</button>
+        <button id="abrir-teclado" aria-label="Abrir teclado virtual">Teclado</button>
+        <button id="botao-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+    </div>
+
+    <div class="receitas" id="lista-receitas"></div>
+
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
         <div class="modal-content">
-            <span class="fechar" id="fechar-modal">&times;</span>
+            <button class="fechar" id="fechar-modal" aria-label="Fechar modal">&times;</button>
             <h2 id="modal-titulo"></h2>
-            <img id="modal-imagem" src="" alt="">
+            <img id="modal-imagem" src="" alt="" />
             <h3>Ingredientes:</h3>
             <ul id="modal-ingredientes"></ul>
             <h3>Modo de Preparo:</h3>
@@ -23,23 +31,15 @@
         </div>
     </div>
 
-    <div id="teclado-virtual" class="teclado">
-        <div id="teclas">
-
-            <!-- teclas pelo js -->
-
-        </div>
-        <button onclick="fecharTeclado()">Fechar</button>
+    <div id="teclado-virtual" class="teclado" aria-label="Teclado virtual para busca">
+        <div id="teclas"></div>
+        <button onclick="fecharTeclado()" aria-label="Fechar teclado virtual">Fechar</button>
     </div>
 
-    <div class="barra-superior">
-        <input type="text" id="campo-busca" placeholder="Buscar receitas..."
-        onkeyup="filtrarReceitas()">
-        <button id="botao-busca" onclick="filtrarReceitas()">Buscar</button>
-        <button id="abrir-teclado">e</button>
-    </div>
+
+
 
     <script src="index.js"></script>
-
-    </body>
+</body>
 </html>
+
