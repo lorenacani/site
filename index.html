@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GastroLab</title>
+    <!-- REFERENTE AO LINK DE DECORAÇÃO -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>  
-
+    
+    <!-- REFERENTE AO TITULO, H1 TAMANHO DA FONTE -->
     <h1>Receitas Deliciosas</h1>
 
+    <!-- serve para criar a barra superior do site, que contem os botoes e a busca de receitas -->
     <div class="barra-superior">
+        <!-- placeholder serve para texto temporario dentro do campo que serve para buscar receitas -->
+         <!-- onkeyup evento p quando o usuario soltar a tecla, wuando vc solta ele vai chamar a funcao filtrar receitas- clicou na tecla o e ele pesquis a receita que começa com a letra o -->
         <input type="text" id="campo-busca" placeholder="Buscar receitas..." onkeyup="filtrarReceitas()" />
+        <!-- evento que qyuando clicado cham a funcao filtrarreceita, quando clica no botao buscar ele chama a funcao e filtra as receitas e acordo com oq vc escreveu -->
         <button id="botao-busca" onclick="filtrarReceitas()">Buscar</button>
+        <!--  -->
         <button id="abrir-teclado" aria-label="Abrir teclado virtual">Teclado</button>
         <button id="botao-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
     </div>
